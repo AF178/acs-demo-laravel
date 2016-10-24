@@ -23,6 +23,12 @@ Route::get('acs', function(){
 			'cardnumber'=>'4512********6523']);
 });
 
+Route::post('authcode', function () {
+	
+	return "transction successful";
+});
+
 Route::get('enroll', function () {
 	return view('bankenroll', ['cardnumber'=>'7845********9856']);
 });
+
