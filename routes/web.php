@@ -11,22 +11,22 @@
 |
 */
 
+//use App\Http\Controllers\AcsDemo\AcsController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('acs', function(){
-	return view('acs', [
-			'merchant'=>'MoneyDemo', 
-			'amount'=>'25,95', 
-			'date'=>'25 october 2016', 
-			'cardnumber'=>'4512********6523']);
-});
+Route::get('acs', 'AcsDemo\AcsController@authorizeNoParams');
 
-Route::post('authcode', function () {
-	
-	return "transction successful";
-});
+Route::post('authcode', 'AcsDemo\AuthCodeController@post');
+
+Route::get('authcode', 'AcsDemo\AuthCodeController@get');
+
+
+
+
+
 
 Route::get('enroll', function () {
 	return view('bankenroll', ['cardnumber'=>'7845********9856']);
