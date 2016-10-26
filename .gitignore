@@ -9,3 +9,5 @@ Homestead.yaml
 .settings
 composer.lock
 yarn.lock
+.project
+.buildpath
