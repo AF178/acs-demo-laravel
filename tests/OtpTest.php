@@ -79,5 +79,21 @@ class OtpTest extends TestCase {
 		//strtotime('1970-01-01 00:00:59 UTC'), '287082'
 	}
 	
+	function testGenerateHEXSeed() {
+	
+		// Generates a 20-byte (160-bit) secret key
+		//$otpSeed = Seed::generate();
+	
+		// -OR- use a pre-generated string
+		$otpSeed = new Seed('thisismysecret');
+	
+		// Display secret key details
+		printf("Secret (HEX): %s\n", $otpSeed->getValue(Seed::FORMAT_HEX));
+		printf("Secret (BASE32): %s\n", $otpSeed->getValue(Seed::FORMAT_BASE32));
+	
+		//
+		$this->assertNotEmpty($otpSeed,'this was the HEX seed for thisismysecret');
+	}
+	
 	
 }

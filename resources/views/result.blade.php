@@ -27,25 +27,10 @@
                         
                         
                         	
-                            <h3> Enroll your device</h3>
-                                         
-                            <div class="row">
-                            	<div class="col-md-2"></div>
-                                <div class="col-md-4">Card Number</div>
-                                <div class="col-md-6">{{$cardnumber}}</div>
-                            </div>
-                            <div class="row">
-                            	<p></p>
-                            	<img class="center-block" src="{{$qrcode}}" alt=""/></div>
-                                <p></p>
-                            </div>
-                            <div class="row">
-           						<div class="col-md-4"></div>
-                                <div class="col-md-4">
-                                  <button type="button" class="btn btn-sm btn-primary">Done</button>
-                                  <button type="button" class="btn btn-sm btn-default">Failed</button>
-                                </div>  
-					  	</div>
+                            <h3>{{$result}}</h3>
+                            
+							<a href="acs">check another one-time password</a>
+                            
 					  	<p></p>
 					</div>
 				</div>

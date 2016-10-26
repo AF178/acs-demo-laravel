@@ -25,10 +25,8 @@ Route::get('authcode', 'AcsDemo\AuthCodeController@get');
 
 
 
-
-
-
-Route::get('enroll', function () {
-	return view('bankenroll', ['cardnumber'=>'7845********9856']);
-});
+Route::get('enroll', 'AcsDemo\EnrollController@generateUri' );
+	
+	
+	//return view('bankenroll', ['cardnumber'=>'7845********9856']);
 
